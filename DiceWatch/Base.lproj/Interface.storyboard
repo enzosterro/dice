@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DiceWatch_Extension">
+                    <items>
+                        <spriteKitScene alignment="center" verticalAlignment="center" id="48j-VI-eYP">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="sGS-hu-wHB">
+                                    <connections>
+                                        <action selector="tapDidHandle:" destination="AgC-eL-Hgc" id="OAf-fY-L62"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </spriteKitScene>
+                    </items>
+                    <connections>
+                        <outlet property="sceneInterface" destination="48j-VI-eYP" id="c2J-ku-QkB"/>
+                        <outlet property="tapGesture" destination="sGS-hu-wHB" id="JJ4-f4-9qm"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
