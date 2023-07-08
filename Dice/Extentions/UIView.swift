@@ -11,11 +11,7 @@ import UIKit
 extension UIView {
 
     var frameSize: CGSize {
-        if #available(iOS 11.0, *) {
-            return self.layoutMarginsGuide.layoutFrame.size
-        } else {
-            return frame.size
-        }
+        layoutMarginsGuide.layoutFrame.size
     }
 
 }

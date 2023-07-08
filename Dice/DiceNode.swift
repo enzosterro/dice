@@ -94,7 +94,7 @@ final class DiceNode: SKShapeNode {
         dot.lineWidth = 0.1
         dot.strokeColor = .black
         #if os(iOS)
-        dot.fillTexture = dotTexture()
+        dot.fillTexture = dotTexture(size: dotsFrame.size)
         #endif
         dot.name = NodeType.dot.rawValue
         dotNodes.append(dot)
@@ -102,9 +102,9 @@ final class DiceNode: SKShapeNode {
     }
 
     #if os(iOS)
-    private func dotTexture() -> SKTexture {
+    private func dotTexture(size: CGSize) -> SKTexture {
         guard let dotTextureCached = dotTextureCached else {
-            let dotTextureCached = SKTexture(size: CGSize(width: dotRadius, height: dotRadius), color1: .black, color2: CIColor(color: .lightGray))
+            let dotTextureCached = SKTexture(size: size, color1: .black, color2: CIColor(color: .lightGray))
             self.dotTextureCached = dotTextureCached
             return dotTextureCached
         }
